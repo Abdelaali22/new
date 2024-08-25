@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABDELAALI APP - Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="header-animation" class="lottie-container"></div>
+            <h1>ABDELAALI APP</h1>
+            <button id="theme-toggle" class="theme-toggle">🌙 Night Mode</button>
+        </header>
+        <form id="task-form">
+            <input type="text" id="task-name" placeholder="Task Name" required>
+            <input type="datetime-local" id="task-time" required>
+            <select id="task-category">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="study">Study</option>
+            </select>
+            <select id="task-priority">
+                <option value="high">High Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="low">Low Priority</option>
+            </select>
+            <input type="submit" value="Add Task">
+        </form>
+        <section class="task-list-section">
+            <div class="filters">
+                <input type="text" id="search-bar" placeholder="Search tasks...">
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="study">Study</option>
+                </select>
+            </div>
+            <h2>Your Tasks</h2>
+            <ul id="task-list"></ul>
+        </section>
+        <section class="calendar-section">
+            <h2>Task Calendar</h2>
+            <div id="calendar"></div>
+        </section>
+        <audio id="alert-sound" src="assets/alert.mp3"></audio> <!-- Audio file -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
